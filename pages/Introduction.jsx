@@ -26,42 +26,25 @@ export default function Introduction({ isSidebarOpen, setIsSidebarOpen }) {
     router.push("/");
   }
 
-  useEffect(() => {
-    // console.log(user.email[0].toUpperCase())
-    setFirstLetter(auth.currentUser?.email[0].toUpperCase());
-  }, [user]);
-
   return (
     <>
-      <div className="nav">
-        <div className="logo__Wrapper">
-          {isSidebarOpen ? (
-            <AiOutlineClose className="menu cursor" onClick={closeMenu} />
-          ) : (
-            <VscMenu className="menu cursor" onClick={openMenu} />
-          )}
-          <Image src={Logo} alt="" className="logo" />
+      <Navbar />
+      <div id="introduction">
+        <div className="player">
+            <div className="vimeo">
+              <iframe
+                src="https://player.vimeo.com/video/851580640?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                className="vimeo__iframe"
+                title="Fortnite"
+              ></iframe>
+            </div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
-        <ul className="links">
-          <Link className="link__wrapper" href="/Profile">
-            <button className="job__guarantee--button">
-              Job Guarantee <FaCrown className="crown" />
-            </button>
-          </Link>
-          <button className="logout__button" onClick={signOut}>
-            {firstLetter}
-          </button>
-        </ul>
       </div>
-      <div id="introduction"></div>
-      <iframe
-        src="https://player.vimeo.com/video/851580640?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-        width="1280"
-        height="720"
-        frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture"
-        title="Fortnite_20221029212356"
-      ></iframe>
+      <script src="https://player.vimeo.com/api/player.js"></script>
     </>
   );
 }
+

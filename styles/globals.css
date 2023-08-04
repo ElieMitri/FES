@@ -78,6 +78,27 @@ li {
   overflow: hidden;
 }
 
+.vimeo {
+  padding: 56.25% 0 0 0;  
+  position: relative;
+}
+
+.vimeo__iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+}
+
+#introduction {
+  
+}
+
+.player {
+  
+}
+
 /*
 
 NAV
@@ -197,7 +218,7 @@ SIDEBAR
 .sidebar {
   width: 300px;
   background-color: #efeff0;
-  border-right: 2px solid #b1b1b13b;;
+  border-right: 2px solid #b1b1b13b;
 }
 
 .course__wrapper {
@@ -212,7 +233,7 @@ SIDEBAR
 }
 
 .accoridon {
- background-color: white;
+  background-color: white;
 }
 
 .accordion__wrapper {
@@ -246,7 +267,6 @@ SIDEBAR
   color: black;
   margin: 10px 15px;
 }
-
 
 /*
 
